@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnPR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><em>OnPR<br>Lets Go Pooks</em></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Home">Home</a></li>
+            <li><a href="Workouts">Workouts</a></li>
+            <li><a href="Nutrition">Nutrition</a></li>
+            <li><a href="Profile">Profile</a></li>
+            <li><a href="Quaries">Quaries</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="true_self">
+            <h1><strong>You can make it from 0-1</strong></h1>
+            <p>You look beautiful loves, but you can be better you</p><br>
+            <p>I know this will be motivating enough and i know we can do it if we be strict about it.<br> I know you are interested and wanna chaeck it down below.</p>
+            <button onclick="scrollToWorkouts()">Explore workouts</button>
+         <script>
+           function scrollToWorkouts() {
+                const workoutsSection = document.getElementById('workouts');
+                workoutsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+    
+            function toggleWorkoutDetails(workoutDiv) {
+                workoutDiv.classList.toggle('show-details');
+                const button = workoutDiv.querySelector('button');
+                button.textContent = workoutDiv.classList.contains('show-details') ? 'Hide Details' : 'View Details';
+            }
+        </script>
+    
+        </section>
+
+        
+</body>
+</html>
