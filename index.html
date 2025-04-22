@@ -1,46 +1,89 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnPR</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1><em>OnPR<br>Lets Go Pooks</em></h1>
+<body class="bg-black text-white">
+    <header class="text-center py-6">
+        <h1 class="text-4xl font-bold"><em>OnPR<br>Lets Go Pooks</em></h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="Home">Home</a></li>
-            <li><a href="Workouts">Workouts</a></li>
-            <li><a href="Nutrition">Nutrition</a></li>
-            <li><a href="Profile">Profile</a></li>
-            <li><a href="Quaries">Quaries</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <section id="true_self">
-            <h1><strong>You can make it from 0-1</strong></h1>
-            <p>You look beautiful loves, but you can be better you</p><br>
-            <p>I know this will be motivating enough and i know we can do it if we be strict about it.<br> I know you are interested and wanna chaeck it down below.</p>
-            <button onclick="scrollToWorkouts()">Explore workouts</button>
-         <script>
-           function scrollToWorkouts() {
-                const workoutsSection = document.getElementById('workouts');
-                workoutsSection.scrollIntoView({ behavior: 'smooth' });
-            }
-    
-            function toggleWorkoutDetails(workoutDiv) {
-                workoutDiv.classList.toggle('show-details');
-                const button = workoutDiv.querySelector('button');
-                button.textContent = workoutDiv.classList.contains('show-details') ? 'Hide Details' : 'View Details';
-            }
-        </script>
-    
-        </section>
-
+    <nav class="py-4">
+        <div class="flex items-center justify-center h-full">
+            <a href="index.html"></a>
+            <button
+                class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                type="button"
+            >
+                Home
+            </button>
+        </a>
+        <a href="pages/workouts.html">
+            <button
+                class="text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                type="button"
+            >
+                Workouts
+            </button>
+        </a>
+        <a href="pages/nutrition.html">
+            <button
+                class="text-white bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-400/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                type="button"
+            >
+                Nutrition
+            </button>
+        </a>
+        <a href="pages/profile.html">
+            <button
+                class="text-white bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                type="button"
+            >
+                Profile
+            </button>
+        </a>
+        <a href="pages/quaries.html">
+            <button
+                class="text-white bg-gradient-to-r from-green-500 via-green-600 to-green-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                type="button"
+            >
+                Quaries
+            </button>
+        </a>
+        </div>
+    </nav>  
         
+    <div class="container mx-auto px-4 py-8">
+        <section id="true_self" class="text-center">
+            <h1 class="text-3xl font-bold mb-4"><strong>You can make it from 0-1</strong></h1>
+            <p class="text-lg mb-4">You look beautiful loves, but you can be better you</p>
+            <p class="text-lg mb-6">
+                I know this will be motivating enough and I know we can do it if we be strict about it.<br>
+                I know you are interested and wanna check it down below.
+            </p>
+            <button 
+                onclick="scrollToWorkouts()" 
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+                Explore workouts
+            </button>
+        </section>
+    </div>
+
+    <script>
+        function scrollToWorkouts() {
+            const workoutsSection = document.getElementById('workouts');
+            workoutsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleWorkoutDetails(workoutDiv) {
+            workoutDiv.classList.toggle('show-details');
+            const button = workoutDiv.querySelector('button');
+            button.textContent = workoutDiv.classList.contains('show-details') ? 'Hide Details' : 'View Details';
+        }
+    </script>
 </body>
 </html>
